@@ -96,6 +96,10 @@
 (global-linum-mode t)
 (setq cljr-inject-dependencies-at-jack-in nil)
 
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "<insert>"))
+(global-set-key (kbd "C-<insert>") 'overwrite-mode)
+
 (provide 'personal)
 
 ;;; personal.el ends here
