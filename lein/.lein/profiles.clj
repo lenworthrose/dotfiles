@@ -1,6 +1,6 @@
 {:user {:plugins [[lein-kibit "0.1.2"]
                   [lein-ancient "0.6.7"]
-                  [lein-environ "1.0.2"]
+                  [lein-environ "1.0.3"]
                   [lein-vanity "0.2.0"]
                   [codox "0.9.0"]
                   [lein-exec "0.3.5"]
