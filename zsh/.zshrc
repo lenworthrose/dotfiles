@@ -1,3 +1,5 @@
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # Path to your oh-my-zsh installation.
   export ZSH=/home/lenny/.oh-my-zsh
 
