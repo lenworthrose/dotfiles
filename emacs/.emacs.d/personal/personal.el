@@ -34,6 +34,7 @@
                             clj-refactor
                             key-chord
                             avy
+                            smex
                             rainbow-delimiters
                             aggressive-indent))
 
@@ -64,6 +65,12 @@
      (global-set-key (kbd "C-c C-s") #'cider-format-buffer)))
 
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
+
+(autoload 'smex "smex"
+  "Smex is a M-x enhancement for Emacs, it provides a convenient interface to
+your recently and most frequently used commands.")
+
+(global-set-key (kbd "M-x") 'smex)
 
 (key-chord-define-global "xx" 'smex)
 
