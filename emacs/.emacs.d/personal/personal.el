@@ -35,7 +35,6 @@
                             clj-refactor
                             key-chord
                             avy
-                            smex
                             rainbow-delimiters
                             aggressive-indent))
 
@@ -61,19 +60,11 @@
      (add-hook 'cider-repl-mode-hook #'paredit-mode)
      (add-hook 'cider-repl-mode-hook #'eldoc-mode)
      (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
-     (add-hook 'cider-repl-mode-hook #'company-mode)
-     (add-hook 'cider-mode-hook #'company-mode)
      (setq cider-font-lock-dynamically '(macro core function var))
      (setq cider-overlays-use-font-lock t)
      (global-set-key (kbd "C-c C-s") #'cider-format-buffer)))
 
 (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
-
-(autoload 'smex "smex"
-  "Smex is a M-x enhancement for Emacs, it provides a convenient interface to
-your recently and most frequently used commands.")
-
-(global-set-key (kbd "M-x") 'smex)
 
 (key-chord-define-global "xx" 'smex)
 
@@ -121,33 +112,11 @@ your recently and most frequently used commands.")
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "<insert>"))
 (global-set-key (kbd "C-<insert>") 'overwrite-mode)
+(global-set-key (kbd "<home>") 'crux-move-beginning-of-line)
 
-(setq cider-font-lock-dynamically '(macro core function var))
-(setq cider-overlays-use-font-lock t)
+;;(setq cider-font-lock-dynamically '(macro core function var))
+;;(setq cider-overlays-use-font-lock t)
 
 (provide 'personal)
 
 ;;; personal.el ends here
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
